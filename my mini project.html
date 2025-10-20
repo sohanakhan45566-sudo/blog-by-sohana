@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport
+content=" width=device-width,initial-scale=1.0">
+    <title>BLOG by SOHANA_AKBAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+/* 🌸 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* 🌷 Body Styling */
+body {
+  background: linear-gradient(135deg, #fff6f9, #ffeef7);
+  color: #444;
+  line-height: 1.7;
+  padding: 40px;
+}
+
+/* 💋 Main Heading */
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #b84a7c;
+  margin-bottom: 25px;
+  border-bottom: 2px dashed #ff9ecf;
+  padding-bottom: 10px;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+}
+
+/* 🌈 Glow Animation for Heading */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ffb6c1; }
+  50% { text-shadow: 0 0 20px #ff85b3; }
+  100% { text-shadow: 0 0 5px #ffb6c1; }
+}
+
+h1:hover {
+  animation: glow 2s infinite alternate;
+}
+
+/* 🌸 Container for 3 Boxes */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* 💝 Box Styling */
+.box {
+  background: #ffffffc7;
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.25);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.4);
+}
+
+/* 🌷 Box Headings */
+.box h2 {
+  color: #b84a7c;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+/* ✨ Box Paragraphs */
+.box p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* 💕 Text Highlights */
+strong, span {
+  color: #ff5b8f;
+}
+
+em {
+  color: #c64b8a;
+  font-style: italic;
+}
+
+/* 🌸 Links */
+a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dotted #ff69b4;
+}
+
+a:hover {
+  color: #e03e8b;
+  border-bottom: 1px solid #e03e8b;
+}
+
+/* 🌷 Custom List Style (if you use lists) */
+ul {
+  margin: 15px 0;
+  padding-left: 25px;
+  list-style: '🌷 ';
+}
+
+/* ✨ Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 40px;
+  border-top: 1px dashed #ffb3d1;
+  padding-top: 10px;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 25px;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .box h2 {
+    font-size: 1.1rem;
+  }
+  /* 🌸 About Section */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #ffffffc7;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.25);
+  padding: 40px;
+  margin-top: 40px;
+  transition: 0.3s ease;
+}
+
+.about:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.4);
+}
+
+/* 🌷 Text Content */
+.about-content {
+  flex: 1 1 55%;
+}
+
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  color: #b84a7c;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.about-content p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* 💌 Button Style */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff9ecf, #ff69b4);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff69b4, #e03e8b);
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+/* 🌸 Image */
+.about-img {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 280px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+  transition: 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .about-content {
+    flex: 1 1 100%;
+  }
+
+  .about-img img {
+    width: 200px;
+    margin-top: 20px;
+  }
+}
+
+}
+/* 🌸 About Section */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #ffffffc7;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.25);
+  padding: 40px;
+  margin-top: 40px;
+  transition: 0.3s ease;
+}
+
+.about:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.4);
+}
+
+/* 🌷 Text Content */
+.about-content {
+  flex: 1 1 55%;
+}
+
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  color: #b84a7c;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.about-content p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* 💌 Button Style */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff9ecf, #ff69b4);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff69b4, #e03e8b);
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+/* 🌸 Image */
+.about-img {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 280px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+  transition: 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .about-content {
+    flex: 1 1 100%;
+  }
+
+  .about-img img {
+    width: 200px;
+    margin-top: 20px;
+  }
+}
+
+</style>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Blog by SA</div>
+
+        <hr>
+
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <hr>
+
+
+
+        <h1>
+            <div class="multiple icons">💄💋🍥🌷🦢🎀</div>
+        </h1>
+    </header>
+
+    <hr>
+
+      <section id="blogs" class="Blog" >
+        <div class="hero-content">
+            <h1>💋 Glow Like a Goddess — Your Ultimate Self-Care Guide 🌷</h1>
+            <P>By Blog by SA ✨
+
+                        Hey beautiful souls 🌸💫
+
+                      Self-care isn’t just a habit —
+                    it’s a love language with yourself 💕
+                      You deserve to feel confident,
+                     fresh, and radiant every single day.
+                     So let’s talk about the holy trinity
+         of self-care — Makeup, Hygiene, and Skincare! 💄🧴🌿</P>
+        </div>
+      </section>
+
+      <hr>
+
+    <div class="boxes-container">
+        <div class="box Makeup">
+            <div  class="box icon">💄</div>
+            <h2>💄 Makeup — Enhance, Don’t Hide</h2>
+            <p>Makeup isn’t meant to cover you up; it’s meant to bring out the glow that’s already there 💋✨
+
+🌷 Start with a clean, moisturized face.
+🌷 Choose makeup that matches your skin tone & type.
+🌷 Less is always more — a little blush, mascara & gloss = magic!
+🌷 And remember, confidence is the most beautiful shade you can wear 💫</p>
+        </div>
+    </div>
+
+    <div class="boxes-container">
+        <div class="box Hygiene">
+            <div class="box icon">🧼</div>
+            <h2>🧼 Hygiene — The Real Glow Starts Here</h2>
+            <p>Hygiene is the base of every glow-up routine 🌸
+
+🌿 Shower daily with a mild, refreshing body wash.
+🌿 Keep your nails, hair, and clothes clean — freshness is a vibe 💅
+🌿 Change your bedsheets and towels often.
+🌿 Don’t forget your oral care — your smile deserves love too 😁✨</p>
+        </div>
+    </div>
+
+    <div class="boxes-container">
+        <div class="box Skincare">
+            <div class="box icon">🧴</div>
+            <h2>🧴 Skincare — Because Your Skin Deserves Kindness</h2>
+            <p>Good skin isn’t about perfection, it’s about consistency & care 💧
+
+🍃 Cleanse morning & night to remove dirt and oil.
+🍃 Moisturize always — hydration is key!
+🍃 Sunscreen isn’t optional ☀️ (yes, even on cloudy days).
+🍃 Eat clean, sleep well & drink water — glow from within 🌸</p>
+        </div>
+    </div>
+    <section class="about">
+  <div class="about-content">
+    <h2>🌸 About Me</h2>
+    <p>
+      Hey gorgeous! 💕 I’m <strong>Sohana Akbar</strong> — the creator of <em>Blog by SA</em>.  
+      This little corner of the internet is where I share everything about <strong>makeup</strong>,  
+      <strong>skincare</strong>, and <strong>self-love</strong>. ✨  
+      I believe every girl deserves to feel confident, radiant, and loved — inside and out 💋  
+    </p>
+    <p>
+      When I’m not writing, you’ll find me exploring new beauty trends, sipping coffee ☕,  
+      or designing something aesthetic 💅.  
+      Welcome to my world — let’s glow together! 🌷
+    </p>
+    <a href="#contact" class="btn">💌 Connect with Me</a>
+  </div>
+  
+</section>
+
+
+</body>
